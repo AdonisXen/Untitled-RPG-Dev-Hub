@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Untitled RPG - 개발 허브</title>
+    <title>제목 없는 RPG 게임 허브</title>
     <style>
         * {
             margin: 0;
@@ -26,7 +26,7 @@
             padding: 50px;
             border-radius: 20px;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            max-width: 900px;
+            max-width: 700px;
             width: 100%;
         }
 
@@ -46,14 +46,14 @@
 
         .hub-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
             margin-bottom: 30px;
         }
 
         .hub-card {
             background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            padding: 30px;
+            padding: 40px;
             border-radius: 15px;
             text-align: center;
             text-decoration: none;
@@ -69,19 +69,19 @@
         }
 
         .hub-icon {
-            font-size: 4em;
-            margin-bottom: 15px;
+            font-size: 4.5em;
+            margin-bottom: 20px;
         }
 
         .hub-title {
-            font-size: 1.5em;
+            font-size: 1.6em;
             font-weight: bold;
             margin-bottom: 10px;
         }
 
         .hub-description {
             color: #666;
-            font-size: 0.95em;
+            font-size: 1em;
         }
 
         .footer {
@@ -106,8 +106,8 @@
 </head>
 <body>
     <div class="container">
-        <h1>🎮 Untitled RPG</h1>
-        <p class="subtitle">개발 프로젝트 통합 허브</p>
+        <h1>제목 없는 RPG 게임</h1>
+        <p class="subtitle">개발 편의성 허브</p>
 
         <div class="hub-grid">
             <a href="dev.html" class="hub-card">
@@ -116,16 +116,10 @@
                 <div class="hub-description">스튜디오 열기, 테스트 플레이</div>
             </a>
 
-            <a href="docs.html" class="hub-card">
-                <div class="hub-icon">📋</div>
-                <div class="hub-title">기획서</div>
-                <div class="hub-description">게임 디자인 문서</div>
-            </a>
-
-            <a href="assets.html" class="hub-card">
-                <div class="hub-icon">🎨</div>
-                <div class="hub-title">에셋 & 리소스</div>
-                <div class="hub-description">모델, 사운드, 이미지</div>
+            <a href="notice.html" class="hub-card">
+                <div class="hub-icon">⚠️</div>
+                <div class="hub-title">개발 시 주의사항</div>
+                <div class="hub-description">필독 사항 및 규칙</div>
             </a>
         </div>
 
