@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제목없는 RPG 게임 - 개발 주의사항</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .nav {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .back-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 1.1em;
+        }
+
+        .notice-section {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+        }
+
+        .notice-section.danger {
+            background: #f8d7da;
+            border-left-color: #dc3545;
+        }
+
+        .notice-section.info {
+            background: #d1ecf1;
+            border-left-color: #17a2b8;
+        }
+
+        .notice-section.success {
+            background: #d4edda;
+            border-left-color: #28a745;
+        }
+
+        .section-title {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .section-content {
+            font-size: 1.05em;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .notice-list {
+            margin-top: 15px;
+            padding-left: 20px;
+        }
+
+        .notice-list li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 25px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <a href="index.html" class="back-btn">← 메인으로 돌아가기</a>
+    </div>
+
+    <div class="container">
+        <h1>⚠️ 개발 주의사항</h1>
+        <p class="subtitle">필독 사항 및 개발 규칙</p>
+
+        <div class="notice-section danger">
+            <div class="section-title">🚨 절대 금지 사항</div>
+            <div class="section-content">
+                <ul class="notice-list">
+                    <li><strong>메인 플레이스에서 개발 금지</strong> - 반드시 개발용 테스트 플레이스에서 작업</li>
+                    <li><strong>실시간 작업 목록 작성</strong> - 특히 게임의 기본 구조 파일을 건드릴때는 무조건적으로 작성 후 작업. 작업 완료 후 삭제.</li>
+                    <li><strong>테스트 없이 본 플레이스로 퍼블리쉬 금지</strong> - 모든 업데이트는 테스트 플레이스에서 충분한 테스트를 거친 후 [다른 이름으로 Roblox에 게시] 기능을 사용하여 본 플레이스에 퍼블리쉬</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="notice-section">
+            <div class="section-title">⚙️ 개발 워크플로우</div>
+            <div class="section-content">
+                <ul class="notice-list">
+                    <li>각 차원 테스트 플레이스에서 개발 및 테스트</li>
+                    <li>주요 변경사항은 반드시 팀원에게 공유</li>
+                    <li>메인 플레이스에 퍼블리쉬 하기 전, 팀원들에게 공지</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="notice-section info">
+            <div class="section-title">📋 스크립트 작성 규칙</div>
+            <div class="section-content">
+                <ul class="notice-list">
+                    <li>모든 변수와 함수에 타입 명시</li>
+                    <li>주석으로 복잡한 로직 설명</li>
+                    <li>ModuleScript는 반드시 타입 정의 포함</li>
+                    <li>일관된 네이밍 컨벤션 유지 (PascalCase for classes, camelCase for variables)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="notice-section success">
+            <div class="section-title">✅ 권장 사항</div>
+            <div class="section-content">
+                <ul class="notice-list">
+                    <li>정기적인 백업 및 버전 관리</li>
+                    <li>성능 최적화를 항상 고려</li>
+                    <li>UI/UX 일관성 유지</li>
+                    <li>플레이어 피드백 적극 반영</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
